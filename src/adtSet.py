@@ -45,8 +45,30 @@ class Set:
                 break
                 
     def union(self, b):
-        for i in range()           
-                
+        for i in range(0, len(b)):
+            add(self, b[i])
+    
+    def intersection(self,b):
+        for i in range(0, len(self)):
+            if contains(b, self[i]) == False:
+                self.pop(i)
+    
+    def difference(self, b):
+        for i in range(0, len(self)):
+            if contains(b, self[i]) == True:
+                self.pop(i)
+    
+    def to_string(self):
+        stringg = ""
+        for i in range(0,len(self) - 1):
+            stringg += self[i] + ","
+        stringg += self[len(self) - 1]
+        self = stringg
+        if isinstance(self, str) == True:
+            return True
+        else:
+            return False   
+                     
     
     
     
